@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Quiz</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <div class="container mt-3">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">AI Quiz</a>
+            <div class="ml-auto">
+                <span class="navbar-text">
+                    Kullanıcı: {{ username }} | En İyi Puan: {{ best_score }}%
+                </span>
+            </div>
+        </nav>
+
+        <h1 class="text-center mt-4">AI Quiz</h1>
+        <form action="{{ url_for('quiz') }}" method="post">
+            {% for question in questions %}
+            <div class="card mt-4">
+                <div class="card-body">
+                    <h5 class="card-title">{{ loop.index }}. {{ question.question_text }}</h5>
+                    <div class="form-group">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="answer{{ question.id }}" id="optionA{{ question.id }}" value="{{ question.option_a }}" required>
+                            <label class="form-check-label" for="optionA{{ question.id }}">
+                                {{ question.option_a }}
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="answer{{ question.id }}" id="optionB{{ question.id }}" value="{{ question.option_b }}" required>
+                            <label class="form-check-label" for="optionB{{ question.id }}">
+                                {{ question.option_b }}
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="answer{{ question.id }}" id="optionC{{ question.id }}" value="{{ question.option_c }}" required>
+                            <label class="form-check-label" for="optionC{{ question.id }}">
+                                {{ question.option_c }}
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="answer{{ question.id }}" id="optionD{{ question.id }}" value="{{ question.option_d }}" required>
+                            <label class="form-check-label" for="optionD{{ question.id }}">
+                                {{ question.option_d }}
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            <div class="text-center mt-4">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+    </div>
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+<footer class="bg-light text-center text-lg-start fixed-bottom mt-5">
+    <div class="text-center p-3">
+        © 2024 H Hüseyin Alav
+        <div class="mt-2">
+            <a href="https://www.linkedin.com/in/hhsynalv/" target="_blank" class="text-dark me-3">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/hsynalv" target="_blank" class="text-dark">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+    </div>
+</footer>
+</html>

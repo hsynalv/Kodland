@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Exam</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body class="mb-5">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">AI Exam</a>
+    </nav>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h1>Welcome to the AI Exam!</h1>
+                <form action="{{ url_for('set_username') }}" method="post" class="form-inline justify-content-center mt-4">
+                    <div class="form-group mx-sm-3 mb-2">
+                        <label for="username" class="sr-only">Enter your name:</label>
+                        <input type="text" class="form-control" id="username" name="username" placeholder="Your Name" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary mb-2">Start Quiz</button>
+                </form>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-6 col-lg-3">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Python'da Yapay Zeka Geliştirme</h5>
+                            <p class="card-text">
+                                Python, yapay zeka (AI) geliştirmek için en popüler programlama dillerinden biridir.
+                                Python, basit sözdizimi ve güçlü kütüphaneleri ile hem yeni başlayanlar hem de uzmanlar için ideal bir platform sunar.
+                                Bu alanda, AI algoritmalarını anlamak ve uygulamak için gerekli olan temel kavramlar ele alınır.
+                                Öğreneceğiniz konular arasında makine öğrenimi (Machine Learning), derin öğrenme (Deep Learning), sinir ağları (Neural Networks) ve Python'da bu teknikleri kullanarak nasıl uygulamalar geliştirebileceğiniz bulunur.
+                                TensorFlow, Keras ve PyTorch gibi kütüphaneler kullanılarak, gerçek dünyada karşılaşılan problemleri çözebilecek yapay zeka modelleri geliştirme becerisi kazanacaksınız.
+                            </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Bilgisayar Görüşü</h5>
+                            <p class="card-text">
+                                Bilgisayar Görüşü (Computer Vision), makinelerin görüntüleri ve videoları anlama ve yorumlama yeteneği kazandığı bir alandır.
+                                Bu konu kapsamında, görsel verileri işlemek ve analiz etmek için kullanılan teknikleri öğreneceksiniz.
+                                Örneğin, nesne tanıma, yüz tanıma, görüntü sınıflandırma ve segmentasyon gibi görevler bu alanın önemli bileşenlerindendir.
+                                OpenCV, TensorFlow ve Keras gibi kütüphanelerle, kameralar ve sensörler aracılığıyla elde edilen görsel verileri işleyebilen ve anlamlandırabilen uygulamalar geliştireceksiniz.
+                                Bu alandaki beceriler, güvenlik, sağlık, otomotiv ve birçok diğer sektörde önemli uygulamalara sahip.
+                            </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Doğal Dil İşleme (NLP)</h5>
+                            <p class="card-text">
+                                Doğal Dil İşleme (Natural Language Processing - NLP), makinelerin insan dilini anlama, yorumlama ve yanıt verme yeteneğini geliştiren bir yapay zeka alt dalıdır.
+                                Bu konuda, dil modelleri, sözcük yerleştirme (word embedding), duygu analizi (sentiment analysis) ve metin sınıflandırma gibi temel NLP tekniklerini öğreneceksiniz.
+                                Python'da, NLP görevlerini gerçekleştirmek için NLTK, spaCy, ve Transformers gibi kütüphaneleri kullanacaksınız. Ayrıca, chatbotlar, dil çevirileri ve metin tabanlı veri analizi gibi gerçek dünya uygulamaları geliştirme becerisi kazanacaksınız.
+                                NLP, müşteri hizmetleri, pazarlama, ve bilgi yönetimi gibi birçok alanda önemli bir rol oynamaktadır.
+                            </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Python Uygulamalarında AI Modellerini Uygulama</h5>
+                            <p class="card-text">
+                                Yapay zeka modellerini Python uygulamalarına entegre etmek, bu modellerin gerçek dünyada kullanışlı hale gelmesi için kritik bir adımdır.
+                                Bu konuda, yapay zeka modellerini geliştirdikten sonra, bunları web uygulamaları, masaüstü yazılımlar veya mobil uygulamalar gibi farklı platformlara nasıl entegre edebileceğinizi öğreneceksiniz.
+                                Flask ve Django gibi web framework'leri kullanarak, AI modellerini bulut tabanlı servisler olarak sunabilir veya RESTful API'ler aracılığıyla diğer uygulamalarla entegrasyon sağlayabilirsiniz.
+                                Bu alanda edineceğiniz bilgiler, yapay zeka projelerinin gerçek dünyada kullanıma sunulması ve geniş kitlelere erişmesi için önemli bir altyapı oluşturur.
+                            </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+<footer class="bg-light text-center text-lg-start fixed-bottom mt-5">
+    <div class="text-center p-3">
+        © 2024 H Hüseyin Alav
+        <div class="mt-2">
+            <a href="https://www.linkedin.com/in/hhsynalv/" target="_blank" class="text-dark me-3">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/hsynalv" target="_blank" class="text-dark">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+    </div>
+</footer>
+
+</html>
